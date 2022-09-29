@@ -29,6 +29,9 @@
     "**/.vscode/**"
   ],
   "files.associations": {
-    "random": "cpp"
+    "*.php": "html",
+    "random": "cpp",
+    "string_view": "cpp",
+    "regex": "cpp"
   }
 }

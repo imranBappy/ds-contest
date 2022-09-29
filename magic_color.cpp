@@ -18,22 +18,23 @@ int main()
     cin >> t;
     for (int i = 0; i < t; i++)
     {
-
         int n, len = 0;
         cin >> n;
         char output[n], a, b;
-        if (18 == n)
-        {
-            printf("PYC\n");
-            return 0;
-        }
-
         for (int i = 0; i < n - 1; i += 2)
         {
             cin >> a >> b;
             if (a == b)
                 continue;
-            output[len++] = match_color(a, b);
+            char match = match_color(a, b);
+            if (match == output[len - 1])
+            {
+                len--;
+            }
+            else
+            {
+                output[len++] = match_color(a, b);
+            }
         }
         if (n % 2 != 0)
         {
